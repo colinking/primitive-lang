@@ -1,0 +1,7 @@
+// SYNTAX TEST "source.prim" "object with type references"
+
+namespace airplane
+
+object TestObject123 {
+  field1 airplane.TestObject456
+}
