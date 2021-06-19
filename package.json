@@ -1,8 +1,10 @@
 {
-    "name": "prim",
-    "displayName": "prim",
-    "description": "Syntax highlighting for .prim files",
+    "name": "primitive-lang",
+    "displayName": "Primitive Language Support",
+    "description": "Syntax highlighting for Primitive files (.prim)",
     "version": "0.0.1",
+    "publisher": "colinking",
+    "repository": "https://github.com/colinking/primitive-lang",
     "engines": {
         "vscode": "^1.57.0"
     },
@@ -10,16 +12,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "primitive",
-            "aliases": ["Primitive", "primitive"],
-            "extensions": [".prim"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "primitive",
-            "scopeName": "source.prim",
-            "path": "./syntaxes/primitive.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "primitive",
+                "aliases": [
+                    "Primitive",
+                    "prim"
+                ],
+                "extensions": [
+                    ".prim"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "primitive",
+                "scopeName": "source.prim",
+                "path": "./syntaxes/primitive.tmLanguage.json"
+            }
+        ]
     }
 }

@@ -3,30 +3,73 @@
 	"name": "Primitive",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"comment": "Line comments",
+			"begin": "//",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.primitive"
+				}
+			},
+			"end": "$",
+			"name": "comment.line.double-slash.primitive"
 		},
 		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.primitive",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"comment": "Namespace declarations",
+			"match": "(?<=namespace)\\s+([a-zA-Z_]\\w*)",
+			"captures": {
+				"1": {
+					"name": "entity.name.namespace.primitive"
+				}
+			}
 		},
-		"strings": {
-			"name": "string.quoted.double.primitive",
-			"begin": "\"",
-			"end": "\"",
+		{
+			"comment": "Object declarations",
+			"match": "(?<=object)\\s+([a-zA-Z_]\\w*)",
+			"captures": {
+				"1": {
+					"name": "entity.name.object.primitive"
+				}
+			}
+		},
+		{
+			"comment": "Brackets",
 			"patterns": [
 				{
-					"name": "constant.character.escape.primitive",
-					"match": "\\\\."
+					"match": "\\{|\\}",
+					"name": "punctuation.other.bracket.curly.primitive"
+				},
+				{
+					"match": "\\(|\\)",
+					"name": "punctuation.other.bracket.round.primitive"
+				},
+				{
+					"match": "\\[|\\]",
+					"name": "punctuation.other.bracket.square.primitive"
+				}
+			]
+		},
+		{
+			"comment": "Delimiters",
+			"patterns": [
+				{
+					"match": "\\.",
+					"name": "punctuation.other.period.primitive"
+				}
+			]
+		},
+		{
+			"comment": "Keywords",
+			"patterns": [
+				{
+					"name": "keyword.namespace.primitive",
+					"match": "\\b(namespace)\\b"
+				},
+				{
+					"name": "keyword.object.primitive",
+					"match": "\\b(object)\\b"
 				}
 			]
 		}
-	},
+	],
 	"scopeName": "source.prim"
 }
