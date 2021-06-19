@@ -1,0 +1,25 @@
+{
+    "name": "prim",
+    "displayName": "prim",
+    "description": "Syntax highlighting for .prim files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "primitive",
+            "aliases": ["Primitive", "primitive"],
+            "extensions": [".prim"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "primitive",
+            "scopeName": "source.prim",
+            "path": "./syntaxes/primitive.tmLanguage.json"
+        }]
+    }
+}
