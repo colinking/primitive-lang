@@ -1,60 +1,69 @@
 {
-    "name": "primitive-lang",
-    "displayName": "Primitive Language Support",
-    "description": "Syntax highlighting for Primitive files (.prim)",
-    "version": "0.0.1",
-    "publisher": "colinking",
-    "repository": "https://github.com/colinking/primitive-lang",
-    "engines": {
-        "vscode": "^1.57.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "scripts": {
-        "test": "vscode-tmgrammar-snap -s source.prim -g syntaxes/prim.tmLanguage.json -t tests/**/*.prim",
-        "build": "js-yaml syntaxes/prim.tmLanguage.yml > syntaxes/prim.tmLanguage.json && js-yaml syntaxes/prim.md.tmLanguage.yml > syntaxes/prim.md.tmLanguage.json"
-    },
-    "contributes": {
-        "languages": [
-            {
-                "id": "prim",
-                "aliases": [
-                    "Primitive",
-                    "prim"
-                ],
-                "extensions": [
-                    ".prim"
-                ],
-                "configuration": "./language-configuration.json"
-            },
-            {
-                "id": "prim-md"
-            }
+  "name": "primitive-lang",
+  "displayName": "Primitive Language Support",
+  "description": "Syntax highlighting for Primitive files (.prim)",
+  "version": "0.0.1",
+  "publisher": "colinking",
+  "repository": "https://github.com/colinking/primitive-lang",
+  "engines": {
+    "vscode": "^1.57.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "test": "vscode-tmgrammar-snap -s source.prim -g syntaxes/prim.tmLanguage.json -t tests/**/*.prim",
+    "lint": "prettier --write .",
+    "build": "js-yaml syntaxes/prim.tmLanguage.yml > syntaxes/prim.tmLanguage.json && js-yaml syntaxes/prim.md.tmLanguage.yml > syntaxes/prim.md.tmLanguage.json",
+    "prepare": "husky install"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "prim",
+        "aliases": [
+          "Primitive",
+          "prim"
         ],
-        "grammars": [
-            {
-                "language": "prim",
-                "scopeName": "source.prim",
-                "path": "./syntaxes/prim.tmLanguage.json"
-            },
-            {
-                "language": "prim-md",
-                "scopeName": "markdown.prim.codeblock",
-                "path": "./syntaxes/prim.md.tmLanguage.json",
-                "injectTo": [
-                    "text.html.markdown"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.block.prim": "prim"
-                }
-            }
-        ]
-    },
-    "dependencies": {
-        "vscode-tmgrammar-test": "^0.0.11"
-    },
-    "devDependencies": {
-        "js-yaml": "^4.1.0"
-    }
+        "extensions": [
+          ".prim"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "prim-md"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "prim",
+        "scopeName": "source.prim",
+        "path": "./syntaxes/prim.tmLanguage.json"
+      },
+      {
+        "language": "prim-md",
+        "scopeName": "markdown.prim.codeblock",
+        "path": "./syntaxes/prim.md.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.prim": "prim"
+        }
+      }
+    ]
+  },
+  "dependencies": {
+    "vscode-tmgrammar-test": "^0.0.11"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "js-yaml": "^4.1.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "2.3.1"
+  },
+  "prettier": {},
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }

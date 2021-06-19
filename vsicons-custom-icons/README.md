@@ -11,7 +11,12 @@ VSCode does not yet [allow extensions to set default file icons per extension](h
   // Make sure to update this path:
   "vsicons.customIconFolderPath": "/Users/colin/dev/colinking/primitive-lang",
   "vsicons.associations.files": [
-    { "icon": "primitive", "extensions": ["prim"], "light": true, "format": "svg" }
+    {
+      "icon": "primitive",
+      "extensions": ["prim"],
+      "light": true,
+      "format": "svg"
+    }
   ]
 }
 ```

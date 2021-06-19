@@ -25,6 +25,7 @@ $ npm test -- --updateSnapshot
 ## Resources
 
 See:
+
 - [VSCode Syntax Highlighting Guide](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
 - [TextMate Grammars](https://macromates.com/manual/en/language_grammars): includes the [canonical explanation of common scopes](https://macromates.com/manual/en/language_grammars#naming_conventions)
 - [Exhaustive list of common TextMate scopes](https://github.com/psmitt/metalanguage/blob/master/examples/ScopeList.ScopeList)

@@ -2,19 +2,19 @@
 name: Primitive
 scopeName: source.prim
 fileTypes:
-- prim
+  - prim
 patterns:
-- include: "#comment"
-- include: "#namespace"
-- include: "#bracket"
-- include: "#delimiter"
-- include: "#keyword"
-- include: "#object"
+  - include: "#comment"
+  - include: "#namespace"
+  - include: "#bracket"
+  - include: "#delimiter"
+  - include: "#keyword"
+  - include: "#object"
 repository:
   comment:
     begin: "//"
     beginCaptures:
-      '0':
+      "0":
         name: punctuation.definition.comment.prim
     end: "$"
     name: comment.line.double-slash.prim
@@ -22,55 +22,55 @@ repository:
   namespace:
     match: "(?<=namespace)\\s+([a-z][a-zA-Z0-9_]*)"
     captures:
-      '1':
+      "1":
         name: entity.name.namespace.prim
 
   bracket:
     patterns:
-    - match: "\\{|\\}"
-      name: punctuation.other.bracket.curly.prim
-    - match: "\\(|\\)"
-      name: punctuation.other.bracket.round.prim
-    - match: "\\[|\\]"
-      name: punctuation.other.bracket.square.prim
+      - match: "\\{|\\}"
+        name: punctuation.other.bracket.curly.prim
+      - match: "\\(|\\)"
+        name: punctuation.other.bracket.round.prim
+      - match: "\\[|\\]"
+        name: punctuation.other.bracket.square.prim
 
   delimiter:
     patterns:
-    - match: "\\."
-      name: punctuation.other.period.prim
-    - match: "\\?"
-      name: punctuation.other.optional.prim
+      - match: "\\."
+        name: punctuation.other.period.prim
+      - match: "\\?"
+        name: punctuation.other.optional.prim
 
   keyword:
     patterns:
-    - name: keyword.other.namespace.prim
-      match: "\\b(namespace)\\b"
-    - name: keyword.other.object.prim
-      match: "\\b(object)\\b"
+      - name: keyword.other.namespace.prim
+        match: "\\b(namespace)\\b"
+      - name: keyword.other.object.prim
+        match: "\\b(object)\\b"
 
   object:
     name: meta.object.prim
     begin: "(?<=object)\\s+([A-Z][a-zA-Z0-9_]*)"
     beginCaptures:
-      '1':
+      "1":
         name: entity.name.type
     end: "(?<=\\})"
     patterns:
-    - include: "#comment"
-    - include: "#object-content"
+      - include: "#comment"
+      - include: "#object-content"
 
   object-content:
     begin: "{"
     beginCaptures:
-      '0':
+      "0":
         name: punctuation.definition.block.prim
     end: "}"
     endCaptures:
-      '0':
+      "0":
         name: punctuation.definition.block.prim
     patterns:
-    - include: "#comment"
-    - include: "#field"
+      - include: "#comment"
+      - include: "#field"
 
   field-type:
     name: entity.name.type
@@ -80,7 +80,7 @@ repository:
     name: meta.field.declaration.prim
     match: "(?x)\\s*\\b([a-z][a-zA-Z0-9_]*)\\b([A-Z][a-zA-Z0-9_]*)\\b"
     captures:
-      '1':
+      "1":
         name: entity.name
-      '2':
+      "2":
         name: entity.name.type

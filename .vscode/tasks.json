@@ -7,27 +7,23 @@
       "command": "npm test",
       "group": "test",
       "presentation": {
-          "reveal": "always",
-          "panel":"new"
+        "reveal": "always",
+        "panel": "new"
       },
       "problemMatcher": {
-          "fileLocation": [
-              "relative",
-              "${workspaceFolder}"
-          ],
-          "pattern": [
-              {
-                  "regexp": "^(ERROR)\\s([^:]+):(\\d+):(\\d+):(\\d+)\\s(.*)$",
-                  "severity": 1,
-                  "file": 2,
-                  "line": 3,
-                  "column": 4,
-                  "endColumn": 5,
-                  "message": 6
-
-              }
-          ]
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": [
+          {
+            "regexp": "^(ERROR)\\s([^:]+):(\\d+):(\\d+):(\\d+)\\s(.*)$",
+            "severity": 1,
+            "file": 2,
+            "line": 3,
+            "column": 4,
+            "endColumn": 5,
+            "message": 6
+          }
+        ]
       }
-  }
+    }
   ]
 }
