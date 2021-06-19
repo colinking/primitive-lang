@@ -19,3 +19,7 @@ For example if there is an image subfolder under your extension project workspac
 * To add features such as intellisense, hovers and validators check out the VS Code extenders documentation at https://code.visualstudio.com/docs
 
 -->
+
+## Contributing
+
+To contribute to `primitive-lang`, see [`CONTRIBUTING.md`](./.github/CONTRIBUTING.md).
