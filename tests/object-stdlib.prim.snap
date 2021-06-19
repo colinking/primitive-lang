@@ -1,0 +1,22 @@
+>// SYNTAX TEST "source.prim" "object with stdlib types"
+#^^ source.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.prim comment.line.double-slash.prim
+>
+>namespace airplane
+#^^^^^^^^^ source.prim keyword.other.namespace.prim
+#         ^ source.prim
+#          ^^^^^^^^ source.prim entity.name.namespace.prim
+>
+>object TestObject123 {
+#^^^^^^ source.prim keyword.other.object.prim
+#      ^ source.prim meta.object.prim
+#       ^^^^^^^^^^^^^ source.prim meta.object.prim entity.name.type
+#                    ^ source.prim meta.object.prim
+#                     ^ source.prim meta.object.prim punctuation.definition.block.prim
+>  field1 String
+#^^^^^^^^^^^^^^^^ source.prim meta.object.prim
+>  field2 Int
+#^^^^^^^^^^^^^ source.prim meta.object.prim
+>}
+#^ source.prim meta.object.prim punctuation.definition.block.prim
+>

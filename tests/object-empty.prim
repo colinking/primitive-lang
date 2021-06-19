@@ -1,0 +1,5 @@
+// SYNTAX TEST "source.prim" "empty objects"
+
+namespace airplane
+
+object TestObject123 {}

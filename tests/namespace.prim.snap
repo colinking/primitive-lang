@@ -1,0 +1,9 @@
+>// SYNTAX TEST "source.prim" "just namespace"
+#^^ source.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.prim comment.line.double-slash.prim
+>
+>namespace testABC123
+#^^^^^^^^^ source.prim keyword.other.namespace.prim
+#         ^ source.prim
+#          ^^^^^^^^^^ source.prim entity.name.namespace.prim
+>

@@ -3,8 +3,23 @@
 To install this extension, run:
 
 ```sh
+# Grammars are managed in YAML that needs to be first converted to JSON:
+$ npm run build
 $ npx vsce package --out primitive-lang.vsix
 $ code --install-extension primitive-lang.vsix
+```
+
+## Testing
+
+Tests are written using [`vscode-tmgrammar-test`](https://github.com/PanAeon/vscode-tmgrammar-test). See their README for instructions on how to interpret the syntax of these `.snap` files.
+
+To run these tests locally:
+
+```sh
+$ npm install
+$ npm test
+# To apply changes to the snapshots, run:
+$ npm test -- --updateSnapshot
 ```
 
 ## Resources

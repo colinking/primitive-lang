@@ -1,0 +1,4 @@
+>// SYNTAX TEST "source.prim" "empty file"
+#^^ source.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.prim comment.line.double-slash.prim
+>

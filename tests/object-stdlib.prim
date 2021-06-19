@@ -1,0 +1,8 @@
+// SYNTAX TEST "source.prim" "object with stdlib types"
+
+namespace airplane
+
+object TestObject123 {
+  field1 String
+  field2 Int
+}

@@ -11,6 +11,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "scripts": {
+        "test": "vscode-tmgrammar-snap -s source.prim -g syntaxes/prim.tmLanguage.json -t tests/**/*.prim",
+        "build": "js-yaml syntaxes/prim.tmLanguage.yml > syntaxes/prim.tmLanguage.json && js-yaml syntaxes/prim.md.tmLanguage.yml > syntaxes/prim.md.tmLanguage.json"
+    },
     "contributes": {
         "languages": [
             {
@@ -46,5 +50,11 @@
                 }
             }
         ]
+    },
+    "dependencies": {
+        "vscode-tmgrammar-test": "^0.0.11"
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.0"
     }
 }
