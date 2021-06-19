@@ -14,7 +14,7 @@
     "contributes": {
         "languages": [
             {
-                "id": "primitive",
+                "id": "prim",
                 "aliases": [
                     "Primitive",
                     "prim"
@@ -23,13 +23,27 @@
                     ".prim"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "prim-md"
             }
         ],
         "grammars": [
             {
-                "language": "primitive",
+                "language": "prim",
                 "scopeName": "source.prim",
-                "path": "./syntaxes/primitive.tmLanguage.json"
+                "path": "./syntaxes/prim.tmLanguage.json"
+            },
+            {
+                "language": "prim-md",
+                "scopeName": "markdown.prim.codeblock",
+                "path": "./syntaxes/prim.md.tmLanguage.json",
+                "injectTo": [
+                    "text.html.markdown"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.block.prim": "prim"
+                }
             }
         ]
     }
