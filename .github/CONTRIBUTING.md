@@ -1,5 +1,9 @@
 # Contributing
 
+The primary grammar file is available in [`prim.tmLanguage.yml`](../syntaxes/prim.tmLanguage.yml).
+
+## Local Installation
+
 To install this extension, run:
 
 ```sh

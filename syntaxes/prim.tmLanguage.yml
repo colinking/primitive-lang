@@ -12,7 +12,7 @@ patterns:
   - include: "#object"
 repository:
   comment:
-    begin: "//"
+    begin: //
     beginCaptures:
       "0":
         name: punctuation.definition.comment.prim
@@ -20,51 +20,51 @@ repository:
     name: comment.line.double-slash.prim
 
   namespace:
-    match: "(?<=namespace)\\s+([a-z][a-zA-Z0-9_]*)"
+    match: (?<=namespace)\s+([a-z][a-zA-Z0-9_]*)
     captures:
       "1":
         name: entity.name.namespace.prim
 
   bracket:
     patterns:
-      - match: "\\{|\\}"
+      - match: \{|\}
         name: punctuation.other.bracket.curly.prim
-      - match: "\\(|\\)"
+      - match: \(|\)
         name: punctuation.other.bracket.round.prim
-      - match: "\\[|\\]"
+      - match: \[|\]
         name: punctuation.other.bracket.square.prim
 
   delimiter:
     patterns:
-      - match: "\\."
+      - match: \.
         name: punctuation.other.period.prim
-      - match: "\\?"
+      - match: \?
         name: punctuation.other.optional.prim
 
   keyword:
     patterns:
       - name: keyword.other.namespace.prim
-        match: "\\b(namespace)\\b"
+        match: \b(namespace)\b
       - name: keyword.other.object.prim
-        match: "\\b(object)\\b"
+        match: \b(object)\b
 
   object:
     name: meta.object.prim
-    begin: "(?<=object)\\s+([A-Z][a-zA-Z0-9_]*)"
+    begin: (?<=object)\s+([A-Z][a-zA-Z0-9_]*)
     beginCaptures:
       "1":
         name: entity.name.type
-    end: "(?<=\\})"
+    end: (?<=\})
     patterns:
       - include: "#comment"
       - include: "#object-content"
 
   object-content:
-    begin: "{"
+    begin: \{
     beginCaptures:
       "0":
         name: punctuation.definition.block.prim
-    end: "}"
+    end: \}
     endCaptures:
       "0":
         name: punctuation.definition.block.prim
@@ -74,11 +74,11 @@ repository:
 
   field-type:
     name: entity.name.type
-    match: "\\b[A-Z][a-zA-Z0-9_]*\\b"
+    match: \b[A-Z][a-zA-Z0-9_]*\b
 
   field:
     name: meta.field.declaration.prim
-    match: "(?x)\\s*\\b([a-z][a-zA-Z0-9_]*)\\b([A-Z][a-zA-Z0-9_]*)\\b"
+    match: (?x)\s*\b([a-z][a-zA-Z0-9_]*)\b([A-Z][a-zA-Z0-9_]*)\b
     captures:
       "1":
         name: entity.name
