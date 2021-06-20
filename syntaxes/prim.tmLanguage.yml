@@ -81,4 +81,5 @@ repository:
         name: entity.name.prim
     end: $
     patterns:
+      - include: "#comment"
       - include: "#field-type"

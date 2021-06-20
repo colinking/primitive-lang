@@ -1,0 +1,38 @@
+>// SYNTAX TEST "source.prim" "object with comments"
+#^^ source.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.prim comment.line.double-slash.prim
+>
+>// Above namespace
+#^^ source.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#  ^^^^^^^^^^^^^^^^ source.prim comment.line.double-slash.prim
+>namespace airplane
+#^^^^^^^^^ source.prim keyword.other.namespace.prim
+#         ^ source.prim
+#          ^^^^^^^^ source.prim entity.name.namespace.prim
+>
+>// Outside of object
+#^^ source.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#  ^^^^^^^^^^^^^^^^^^ source.prim comment.line.double-slash.prim
+>object TestObject123 {
+#^^^^^^ source.prim keyword.other.object.prim
+#      ^ source.prim meta.object.prim
+#       ^^^^^^^^^^^^^ source.prim meta.object.prim entity.name.type.prim
+#                    ^ source.prim meta.object.prim
+#                     ^ source.prim meta.object.prim punctuation.definition.block.prim
+>  // Hello world!
+#^^ source.prim meta.object.prim
+#  ^^ source.prim meta.object.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#    ^^^^^^^^^^^^^ source.prim meta.object.prim comment.line.double-slash.prim
+>  string String // next to a field
+#^^ source.prim meta.object.prim meta.field.declaration.prim
+#  ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
+#        ^ source.prim meta.object.prim meta.field.declaration.prim
+#         ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
+#               ^^^^^^^^^^^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim
+>  // below a field
+#^^ source.prim meta.object.prim
+#  ^^ source.prim meta.object.prim comment.line.double-slash.prim punctuation.definition.comment.prim
+#    ^^^^^^^^^^^^^^ source.prim meta.object.prim comment.line.double-slash.prim
+>}
+#^ source.prim meta.object.prim punctuation.definition.block.prim
+>
