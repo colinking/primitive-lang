@@ -1,0 +1,11 @@
+// SYNTAX TEST "source.prim" "object with comments"
+
+// Above namespace
+namespace airplane
+
+// Outside of object
+object TestObject123 {
+  // Hello world!
+  string String // next to a field
+  // below a field
+}
