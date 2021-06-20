@@ -59,7 +59,6 @@ repository:
       - include: "#field"
 
   field-type:
-    # TODO: handle (multi-line) inline objects
     begin: (\[\])?
     beginCaptures:
       "1":
@@ -84,7 +83,7 @@ repository:
 
   field:
     name: meta.field.declaration.prim
-    begin: \s*([a-z][a-zA-Z0-9_]*)\s+
+    begin: ([a-z][a-zA-Z0-9_]*)\s*
     beginCaptures:
       "1":
         name: entity.name.prim

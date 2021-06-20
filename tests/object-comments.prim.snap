@@ -24,7 +24,7 @@
 #  ^^ source.prim meta.object.prim comment.line.double-slash.prim punctuation.definition.comment.prim
 #    ^^^^^^^^^^^^^ source.prim meta.object.prim comment.line.double-slash.prim
 >  string String // next to a field
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #        ^ source.prim meta.object.prim meta.field.declaration.prim
 #         ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim

@@ -14,7 +14,7 @@
 #                    ^ source.prim meta.object.prim
 #                     ^ source.prim meta.object.prim punctuation.definition.block.prim
 >  object object InlineObject1 {
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #        ^ source.prim meta.object.prim meta.field.declaration.prim
 #         ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim keyword.other.object.prim
@@ -23,7 +23,7 @@
 #                             ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #                              ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim punctuation.definition.block.prim
 >    str String
-#^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim
+#^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #    ^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #       ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim
 #        ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim support.type.prim
@@ -31,7 +31,7 @@
 #^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #  ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim punctuation.definition.block.prim
 >  array []object InlineObject2 {
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #       ^ source.prim meta.object.prim meta.field.declaration.prim
 #        ^^ source.prim meta.object.prim meta.field.declaration.prim punctuation.definition.array.prim
@@ -41,7 +41,7 @@
 #                              ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #                               ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim punctuation.definition.block.prim
 >    int Int
-#^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim
+#^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #    ^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #       ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim
 #        ^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim support.type.prim
@@ -49,7 +49,7 @@
 #^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #  ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim punctuation.definition.block.prim
 >  opt object InlineObject3 {
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #     ^ source.prim meta.object.prim meta.field.declaration.prim
 #      ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim keyword.other.object.prim
@@ -58,7 +58,7 @@
 #                          ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #                           ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim punctuation.definition.block.prim
 >    bool Boolean
-#^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim
+#^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim
 #    ^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #        ^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim
 #         ^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim meta.object.prim meta.field.declaration.prim support.type.prim
