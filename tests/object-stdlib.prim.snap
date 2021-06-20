@@ -17,10 +17,10 @@
 #^^ source.prim meta.object.prim meta.field.declaration.prim
 #  ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #        ^ source.prim meta.object.prim meta.field.declaration.prim
-#         ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.type.prim
+#         ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >  field2 Int
 #^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim
-#         ^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.type.prim
+#         ^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >}
 #^^ source.prim meta.object.prim meta.field.declaration.prim
 >
