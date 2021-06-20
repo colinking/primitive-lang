@@ -1,0 +1,15 @@
+// SYNTAX TEST "source.prim" "object with inline object"
+
+namespace airplane
+
+object TestObject123 {
+  object object InlineObject1 {
+    str String
+  }
+  array []object InlineObject2 {
+    int Int
+  }
+  opt object InlineObject3 {
+    bool Boolean
+  }?
+}

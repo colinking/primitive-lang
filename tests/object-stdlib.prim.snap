@@ -8,41 +8,43 @@
 #          ^^^^^^^^ source.prim entity.name.namespace.prim
 >
 >object TestObject123 {
-#^^^^^^ source.prim keyword.other.object.prim
+#^^^^^^ source.prim meta.object.prim keyword.other.object.prim
 #      ^ source.prim meta.object.prim
 #       ^^^^^^^^^^^^^ source.prim meta.object.prim entity.name.type.prim
 #                    ^ source.prim meta.object.prim
 #                     ^ source.prim meta.object.prim punctuation.definition.block.prim
 >  string String
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #        ^ source.prim meta.object.prim meta.field.declaration.prim
 #         ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >  int Int
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #     ^ source.prim meta.object.prim meta.field.declaration.prim
 #      ^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >  boolean Boolean
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #         ^ source.prim meta.object.prim meta.field.declaration.prim
 #          ^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >  timestamp Timestamp
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #           ^ source.prim meta.object.prim meta.field.declaration.prim
 #            ^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >  stringArray []String
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #             ^ source.prim meta.object.prim meta.field.declaration.prim
-#              ^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
+#              ^^ source.prim meta.object.prim meta.field.declaration.prim punctuation.definition.array.prim
+#                ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >  optional []String?
-#^^ source.prim meta.object.prim meta.field.declaration.prim
+#^^ source.prim meta.object.prim
 #  ^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #          ^ source.prim meta.object.prim meta.field.declaration.prim
-#           ^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
+#           ^^ source.prim meta.object.prim meta.field.declaration.prim punctuation.definition.array.prim
+#             ^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 #                   ^ source.prim meta.object.prim meta.field.declaration.prim punctuation.other.optional.prim
 >}
 #^ source.prim meta.object.prim punctuation.definition.block.prim

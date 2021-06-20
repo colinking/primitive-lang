@@ -7,7 +7,6 @@ patterns:
   - include: "#comment"
   - include: "#namespace"
   - include: "#delimiter"
-  - include: "#keyword"
   - include: "#object"
 repository:
   comment:
@@ -19,9 +18,11 @@ repository:
     name: comment.line.double-slash.prim
 
   namespace:
-    match: (?<=namespace)\s+([a-z][a-zA-Z0-9_]*)
+    match: (namespace)\s+([a-z][a-zA-Z0-9_]*)
     captures:
       "1":
+        name: keyword.other.namespace.prim
+      "2":
         name: entity.name.namespace.prim
 
   delimiter:
@@ -31,18 +32,13 @@ repository:
       - match: \?
         name: punctuation.other.optional.prim
 
-  keyword:
-    patterns:
-      - name: keyword.other.namespace.prim
-        match: \b(namespace)\b
-      - name: keyword.other.object.prim
-        match: \b(object)\b
-
   object:
     name: meta.object.prim
-    begin: (?<=object)\s+([A-Z][a-zA-Z0-9_]*)
+    begin: (object)\s+([A-Z][a-zA-Z0-9_]*)
     beginCaptures:
       "1":
+        name: keyword.other.object.prim
+      "2":
         name: entity.name.type.prim
     end: (?<=\})
     patterns:
@@ -63,19 +59,31 @@ repository:
       - include: "#field"
 
   field-type:
-    # TODO: handle (multi-line) inline objects
+    begin: (\[\])?
+    beginCaptures:
+      "1":
+        name: punctuation.definition.array.prim
+    end: ((?=//)|$)
     patterns:
-      - name: support.type.prim
-        match: (?:\[\])?(String|Int|Boolean|Timestamp)
-      - name: entity.name.type.prim
-        match: (?:\[\])?([a-z][a-zA-Z0-9_]*)\.([A-Z][a-zA-Z0-9_]*)
+      - include: "#delimiter"
+      # objects can span multiple lines even though end is "$"
+      # since TextMate just pushes `end` out as necessary when
+      # a pattern matches beyond `end`.
+      - include: "#object"
+      - match: (String|Int|Boolean|Timestamp)
+        name: support.type.prim
+      - match: ([a-z][a-zA-Z0-9_]*)(\.)([A-Z][a-zA-Z0-9_]*)
         captures:
           "1":
             name: entity.name.namespace.prim
+          "2":
+            name: punctuation.definition.period.prim
+          "3":
+            name: entity.name.type.prim
 
   field:
     name: meta.field.declaration.prim
-    begin: \s*([a-z][a-zA-Z0-9_]*)\s+
+    begin: ([a-z][a-zA-Z0-9_]*)\s+
     beginCaptures:
       "1":
         name: entity.name.prim
@@ -83,4 +91,3 @@ repository:
     patterns:
       - include: "#comment"
       - include: "#field-type"
-      - include: "#delimiter"
