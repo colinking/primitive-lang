@@ -8,5 +8,5 @@ object TestObject123 {
   boolean Boolean
   timestamp Timestamp
   stringArray []String
-  optional []String?
+  optional? []String
 }
