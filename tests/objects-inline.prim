@@ -9,7 +9,7 @@ object TestObject123 {
   array []object InlineObject2 {
     int Int
   }
-  opt object InlineObject3 {
+  opt? object InlineObject3 {
     bool Boolean
-  }?
+  }
 }

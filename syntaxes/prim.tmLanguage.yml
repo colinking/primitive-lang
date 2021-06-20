@@ -6,7 +6,6 @@ fileTypes:
 patterns:
   - include: "#comment"
   - include: "#namespace"
-  - include: "#delimiter"
   - include: "#object"
 repository:
   comment:
@@ -24,13 +23,6 @@ repository:
         name: keyword.other.namespace.prim
       "2":
         name: entity.name.namespace.prim
-
-  delimiter:
-    patterns:
-      - match: \.
-        name: punctuation.other.period.prim
-      - match: \?
-        name: punctuation.other.optional.prim
 
   object:
     name: meta.object.prim
@@ -65,7 +57,6 @@ repository:
         name: punctuation.definition.array.prim
     end: ((?=//)|$)
     patterns:
-      - include: "#delimiter"
       # objects can span multiple lines even though end is "$"
       # since TextMate just pushes `end` out as necessary when
       # a pattern matches beyond `end`.
@@ -83,10 +74,12 @@ repository:
 
   field:
     name: meta.field.declaration.prim
-    begin: ([a-z][a-zA-Z0-9_]*)\s+
+    begin: ([a-z][a-zA-Z0-9_]*)(\?)?\s+
     beginCaptures:
       "1":
         name: entity.name.prim
+      "2":
+        name: punctuation.other.optional.prim
     end: $
     patterns:
       - include: "#comment"
