@@ -3,5 +3,7 @@
 namespace airplane
 
 object TestObject123 {
-  field1 airplane.TestObject456
+  ref airplane.TestObject456
+  arrayRef []airplane.TestObject456
+  optionalRef airplane.TestObject456?
 }
