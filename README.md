@@ -2,7 +2,7 @@
 
 Adds language support to VSCode for [Primitive](https://github.com/colinking/primitive) (`.prim` files).
 
-It can be installed through the [VSCode marketplace here](https://google.com).
+<!-- It can be installed through the [VSCode marketplace here](https://google.com). -->
 
 <!--
 
