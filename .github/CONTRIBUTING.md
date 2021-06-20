@@ -1,6 +1,6 @@
 # Contributing
 
-The primary grammar file is available in [`prim.tmLanguage.yml`](../syntaxes/prim.tmLanguage.yml).
+The primary grammar file is available in [`prim.tmLanguage.yml`](../syntaxes/prim.tmLanguage.yml). The other grammar, [`prim.md.tmLanguage.yml`](../syntaxes/prim.md.tmLanguage.yml), provides support for `prim` highlighting in Markdown files.
 
 ## Local Installation
 
