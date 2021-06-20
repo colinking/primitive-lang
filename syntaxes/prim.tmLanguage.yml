@@ -72,7 +72,7 @@ repository:
     end: ((?=//)|$)
     patterns:
       - include: "#delimiter"
-      # - include: "#object"
+      - include: "#object"
       - match: (String|Int|Boolean|Timestamp)
         name: support.type.prim
       - match: ([a-z][a-zA-Z0-9_]*)\.([A-Z][a-zA-Z0-9_]*)
