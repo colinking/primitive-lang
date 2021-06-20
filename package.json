@@ -12,10 +12,11 @@
     "Programming Languages"
   ],
   "scripts": {
-    "test": "vscode-tmgrammar-snap -s source.prim -g syntaxes/prim.tmLanguage.json -t tests/**/*.prim",
+    "test": "npm run build && vscode-tmgrammar-snap -s source.prim -g syntaxes/prim.tmLanguage.json -t tests/**/*.prim",
     "lint": "prettier --write .",
     "build": "js-yaml syntaxes/prim.tmLanguage.yml > syntaxes/prim.tmLanguage.json && js-yaml syntaxes/prim.md.tmLanguage.yml > syntaxes/prim.md.tmLanguage.json",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "install-package": "npm run build && vsce package --out primitive-lang.vsix && code --install-extension primitive-lang.vsix && rm primitive-lang.vsix"
   },
   "contributes": {
     "languages": [
@@ -60,7 +61,8 @@
     "husky": "^6.0.0",
     "js-yaml": "^4.1.0",
     "lint-staged": "^11.0.0",
-    "prettier": "2.3.1"
+    "prettier": "2.3.1",
+    "vsce": "^1.93.0"
   },
   "prettier": {},
   "lint-staged": {

@@ -6,7 +6,6 @@ fileTypes:
 patterns:
   - include: "#comment"
   - include: "#namespace"
-  - include: "#bracket"
   - include: "#delimiter"
   - include: "#keyword"
   - include: "#object"
@@ -16,7 +15,7 @@ repository:
     beginCaptures:
       "0":
         name: punctuation.definition.comment.prim
-    end: "$"
+    end: $
     name: comment.line.double-slash.prim
 
   namespace:
@@ -24,15 +23,6 @@ repository:
     captures:
       "1":
         name: entity.name.namespace.prim
-
-  bracket:
-    patterns:
-      - match: \{|\}
-        name: punctuation.other.bracket.curly.prim
-      - match: \(|\)
-        name: punctuation.other.bracket.round.prim
-      - match: \[|\]
-        name: punctuation.other.bracket.square.prim
 
   delimiter:
     patterns:
@@ -53,7 +43,7 @@ repository:
     begin: (?<=object)\s+([A-Z][a-zA-Z0-9_]*)
     beginCaptures:
       "1":
-        name: entity.name.type
+        name: entity.name.type.prim
     end: (?<=\})
     patterns:
       - include: "#comment"
@@ -73,14 +63,22 @@ repository:
       - include: "#field"
 
   field-type:
-    name: entity.name.type
-    match: \b[A-Z][a-zA-Z0-9_]*\b
+    # TODO: handle (multi-line) inline objects
+    patterns:
+      - name: support.type.prim
+        match: (?:\[\])?(String|Int|Boolean|Timestamp)
+      - name: entity.name.type.prim
+        match: '(?:\[\])?([a-z][a-zA-Z0-9_]*)\.([A-Z][a-zA-Z0-9_]*)'
+        captures:
+          "1":
+            name: entity.name.namespace.prim
 
   field:
     name: meta.field.declaration.prim
-    match: (?x)\s*\b([a-z][a-zA-Z0-9_]*)\b([A-Z][a-zA-Z0-9_]*)\b
-    captures:
+    begin: \s*([a-z][a-zA-Z0-9_]*)\s+
+    beginCaptures:
       "1":
-        name: entity.name
-      "2":
-        name: entity.name.type
+        name: entity.name.prim
+    end: $
+    patterns:
+      - include: "#field-type"

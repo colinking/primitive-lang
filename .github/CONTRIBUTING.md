@@ -7,10 +7,7 @@ The primary grammar file is available in [`prim.tmLanguage.yml`](../syntaxes/pri
 To install this extension, run:
 
 ```sh
-# Grammars are managed in YAML that needs to be first converted to JSON:
-$ npm run build
-$ npx vsce package --out primitive-lang.vsix
-$ code --install-extension primitive-lang.vsix
+$ npm run install-package
 ```
 
 ## Testing
@@ -23,7 +20,7 @@ To run these tests locally:
 $ npm install
 $ npm test
 # To apply changes to the snapshots, run:
-$ npm test -- --updateSnapshot
+$ npm test -- -u
 ```
 
 ## Resources
