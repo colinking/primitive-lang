@@ -72,6 +72,9 @@ repository:
     end: ((?=//)|$)
     patterns:
       - include: "#delimiter"
+      # objects can span multiple lines even though end is "$"
+      # since TextMate just pushes `end` out as necessary when
+      # a pattern matches beyond `end`.
       - include: "#object"
       - match: (String|Int|Boolean|Timestamp)
         name: support.type.prim
