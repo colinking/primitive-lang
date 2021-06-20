@@ -38,6 +38,12 @@
 #  ^^^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #             ^ source.prim meta.object.prim meta.field.declaration.prim
 #              ^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
+>  optional []String?
+#^^ source.prim meta.object.prim meta.field.declaration.prim
+#  ^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
+#          ^ source.prim meta.object.prim meta.field.declaration.prim
+#           ^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
+#                   ^ source.prim meta.object.prim meta.field.declaration.prim punctuation.other.optional.prim
 >}
 #^ source.prim meta.object.prim punctuation.definition.block.prim
 >
