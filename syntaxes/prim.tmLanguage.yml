@@ -63,13 +63,12 @@ repository:
       - include: "#field"
 
   field-type:
-    # TODO: handle array types
-    # TODO: handle inline objects
+    # TODO: handle (multi-line) inline objects
     patterns:
       - name: support.type.prim
-        match: (String|Int|Boolean|Timestamp)
+        match: (?:\[\])?(String|Int|Boolean|Timestamp)
       - name: entity.name.type.prim
-        match: '([a-z][a-zA-Z0-9_]*)\.([A-Z][a-zA-Z0-9_]*)'
+        match: '(?:\[\])?([a-z][a-zA-Z0-9_]*)\.([A-Z][a-zA-Z0-9_]*)'
         captures:
           "1":
             name: entity.name.namespace.prim
@@ -80,7 +79,6 @@ repository:
     beginCaptures:
       "1":
         name: entity.name.prim
-    # TODO: figure out how to "end" a field
-    # end: (?=\}|(\s*[a-z]))
+    end: $
     patterns:
       - include: "#field-type"

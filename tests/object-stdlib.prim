@@ -3,6 +3,9 @@
 namespace airplane
 
 object TestObject123 {
-  field1 String
-  field2 Int
+  string String
+  int Int
+  boolean Boolean
+  timestamp Timestamp
+  stringArray []String
 }
