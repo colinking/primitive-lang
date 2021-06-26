@@ -33,6 +33,11 @@
 #  ^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
 #           ^ source.prim meta.object.prim meta.field.declaration.prim
 #            ^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
+>  json JSON
+#^^ source.prim meta.object.prim
+#  ^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim
+#      ^ source.prim meta.object.prim meta.field.declaration.prim
+#       ^^^^ source.prim meta.object.prim meta.field.declaration.prim support.type.prim
 >  stringArray []String
 #^^ source.prim meta.object.prim
 #  ^^^^^^^^^^^ source.prim meta.object.prim meta.field.declaration.prim entity.name.prim

@@ -61,7 +61,7 @@ repository:
       # since TextMate just pushes `end` out as necessary when
       # a pattern matches beyond `end`.
       - include: "#object"
-      - match: (String|Int|Boolean|Timestamp)
+      - match: (String|Int|Boolean|Timestamp|JSON)
         name: support.type.prim
       - match: ([a-z][a-zA-Z0-9_]*)(\.)([A-Z][a-zA-Z0-9_]*)
         captures:
